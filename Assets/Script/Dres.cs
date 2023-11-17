@@ -15,7 +15,7 @@ public class Dres : MonoBehaviour
 
     private void KrzyczGnoju()
     {
-        Debug.Log("GRAAAAGHWRRRRRRRRR Gnoju Ide mu wpierdolic");
+        Debug.Log("GRAAAAGHWRRRRRRRRR");
         if (Obraza != null)
         {
             Obraza.Invoke();

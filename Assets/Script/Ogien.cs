@@ -15,7 +15,6 @@ public class Ogien : MonoBehaviour
 
     private void WidziszOgnien()
     {
-        Debug.Log("Zapalam swiatla alarmowe");
         if (PaliSie != null)
         {
             PaliSie.Invoke();

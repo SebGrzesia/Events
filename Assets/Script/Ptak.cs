@@ -18,7 +18,6 @@ public class Ptak : MonoBehaviour
 
     private void LeciJaskolka()
     {
-        Debug.Log("przygladam sie przez lornetke");
         if (WidziszPtaka != null)
         {
             WidziszPtaka.Invoke();
