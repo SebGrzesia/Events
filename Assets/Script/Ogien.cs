@@ -7,10 +7,12 @@ using UnityEngine.UI;
 public class Ogien : MonoBehaviour
 {
     public event Action PaliSie;
+    public Button somsiadSiePali;
+    public Button ognistyButton;
     void Start()
     {
-        Button btn = GetComponentInChildren<Button>();
-        btn.onClick.AddListener(WidziszOgnien);
+        ognistyButton.onClick.AddListener(WidziszOgnien);
+        somsiadSiePali.onClick.AddListener(WidziszSygnalAlarmowyDrugiejWiezy);
     }
 
     private void WidziszOgnien()
@@ -21,4 +23,12 @@ public class Ogien : MonoBehaviour
         }
     }
 
+    private void WidziszSygnalAlarmowyDrugiejWiezy()
+    {
+        Debug.Log("Nie");
+        if(PaliSie != null)
+        {
+            PaliSie.Invoke();
+        }
+    }
 }

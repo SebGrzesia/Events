@@ -6,17 +6,28 @@ using UnityEngine.UI;
 
 public class Dres : MonoBehaviour
 {
+    public Button DresButton;
+    public Button WuglarnyButton;
     public event Action Obraza;
     void Start()
     {
-        Button btn = GetComponentInChildren<Button>();
-        btn.onClick.AddListener(KrzyczGnoju);
+        DresButton.onClick.AddListener(KrzyczGnoju);
+        WuglarnyButton.onClick.AddListener(JestGnusny);
     }
 
     private void KrzyczGnoju()
     {
         Debug.Log("GRAAAAGHWRRRRRRRRR");
         if (Obraza != null)
+        {
+            Obraza.Invoke();
+        }
+    }
+    
+    private void JestGnusny()
+    {
+        Debug.Log("Pokazuje srodkowy palec");
+        if (Obraza!= null)
         {
             Obraza.Invoke();
         }
